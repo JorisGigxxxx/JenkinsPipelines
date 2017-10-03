@@ -19,17 +19,6 @@ pipeline
             {
                 echo "Start Build"
                 echo "End   Build"
-                post
-                {
-                    success
-                    {
-                        echo "Build Succeed"
-                    }
-                    failure
-                    {
-                        echo "Build Failed"
-                    }
-                }
             }
         }
 

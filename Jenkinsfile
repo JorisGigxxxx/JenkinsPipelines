@@ -19,7 +19,6 @@ pipeline
             {
                 echo "Start Build"
                 echo "End   Build"
-                error "error simulation"
                 post
                 {
                     success

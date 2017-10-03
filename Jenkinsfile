@@ -18,6 +18,14 @@ pipeline
             steps
             {
                 echo "Start Build"
+                try
+                {
+                    error "Failure simulation"
+                }
+                catch
+                {
+                    echo "Failure caught"
+                }
                 echo "End   Build"
             }
         }

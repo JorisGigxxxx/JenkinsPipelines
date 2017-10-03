@@ -1,4 +1,4 @@
- pipeline
+pipeline
 {
     agent any
     // This displays colors using the 'xterm' ansi color map.

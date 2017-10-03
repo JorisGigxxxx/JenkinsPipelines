@@ -1,5 +1,4 @@
-@Library('utils')
-
+@Library('utils') _
 pipeline
 {
     agent any

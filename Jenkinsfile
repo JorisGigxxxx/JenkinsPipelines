@@ -23,7 +23,7 @@ pipeline
                 {
                     error "Failure simulation"
                 }
-                catch
+                catch (err)
                 {
                     echo "Failure caught"
                 }

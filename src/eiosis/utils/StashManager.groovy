@@ -1,5 +1,5 @@
 #!/usr/bin/groovy
-package eiosis.utils.StashManager
+package eiosis.utils
 
 class StashManager
 {

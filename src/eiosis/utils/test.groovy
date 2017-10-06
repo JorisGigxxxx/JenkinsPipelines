@@ -5,7 +5,7 @@ def call(body)
 {
     try
     {
-        Stage ('Clone')
+        stage ('Clone')
         {
         }
         stage ('Build')

@@ -3,9 +3,10 @@ package eiosis.utils
 
 class StashManager
 {
-    StashManager()
+    StashManager(inSteps)
     {
-        echo "StageManager constructor"
+        this.mSteps = inSteps
+        mSteps.echo "StageManager constructor"
     }
 
 // ----------------------------------------------------------------------------
@@ -14,29 +15,30 @@ class StashManager
     {
         if (this.mArtifacts.contains(inName))
         {
-            echo "Cannot duplicate stash entries"
+            mSteps.echo "Cannot duplicate stash entries"
             return
         }
-        echo "Stash mArtifacts:" + inPath + " as entry: " + inName
+        mSteps.echo "Stash mArtifacts:" + inPath + " as entry: " + inName
         mArtifacts << inName
-        stash includes: inPath, name: inName
+        mSteps.stash includes: inPath, name: inName
     }
 
     def dump()
     {
-        echo mArtifacts
+        mSteps.echo mArtifacts
     }
 
     def unstash()
     {
         mArtifacts.each
         { item ->
-            unstash name:item
+            mSteps.unstash name:item
         }
     }
 
 // ----------------------------------------------------------------------------
 
+    private mSteps
     private Set<String> mArtifacts = []
 }
 
